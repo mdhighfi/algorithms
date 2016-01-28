@@ -17,4 +17,8 @@ class Stack
   def size
     self.store.length
   end
+
+  def empty?
+    size.zero?
+  end
 end
