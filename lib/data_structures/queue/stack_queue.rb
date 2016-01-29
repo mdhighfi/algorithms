@@ -8,26 +8,26 @@ class StackQueue
   end
 
   def empty?
-    self.in.empty? && self.out.empty?
+    @in.empty? && @out.empty?
   end
 
   def size
-    self.in.size + self.out.size
+    @in.size + @out.size
   end
 
   def enqueue(val)
-    self.in.push(val)
+    @in.push(val)
   end
 
   def dequeue
-    move_in_to_out if self.out.empty?
-    self.out.pop
+    move_in_to_out if @out.empty?
+    @out.pop
   end
 
   private
 
   def move_in_to_out
-    self.out.push(self.in.pop) until self.in.empty?
+    @out.push(@in.pop) until @in.empty?
   end
 
 end

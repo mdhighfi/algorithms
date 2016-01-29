@@ -6,7 +6,7 @@ class BinTree
   end
 
   def bfs
-    
+
   end
 
   def dfs
